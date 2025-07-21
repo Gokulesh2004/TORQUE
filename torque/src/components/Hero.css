@@ -1,0 +1,105 @@
+/* Pulse animation for the circle */
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.2);
+      opacity: 0;
+    }
+  }
+  
+  /* Swipe Up Animation for Hero Content */
+  @keyframes swipeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .swipe-up-animation {
+    opacity: 0;
+    animation: swipeUp 1s ease-in-out forwards;
+  }
+  
+  .swipe-up-animation:nth-child(1) {
+    animation-delay: 0.3s;
+  }
+  
+  .swipe-up-animation:nth-child(2) {
+    animation-delay: 0.6s;
+  }
+  
+  .swipe-up-animation:nth-child(3) {
+    animation-delay: 0.9s;
+  }
+  
+  /* Swipe Up Instruction Styles */
+  .swipe-up-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: swipeUp 2s ease-in-out 1s forwards;
+  }
+  
+  .swipe-up-circle {
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 1.5s infinite;
+  }
+  
+  .swipe-up-arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 14px solid white;
+    position: absolute;
+    top: 14px;
+  }
+  
+  .swipe-up-arrow::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    right: -10px;
+    top: -24px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 14px solid white;
+    opacity: 0.7;
+  }
+  
+  .swipe-up-container p {
+    font-size: 0.75rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+  }
+  
+  /* Pulse effect for the swipe up circle */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1.1);
+      opacity: 0;
+    }
+  }
+  

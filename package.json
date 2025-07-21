@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "owl.carousel": "^2.3.4",
+    "react-owl-carousel": "^2.3.3",
+    "react-router-dom": "^6.26.1"
+  }
+}
